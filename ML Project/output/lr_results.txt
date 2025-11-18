@@ -1,0 +1,11 @@
+Dataset: output/cleaned_student-mat.csv
+Accuracy: 0.7974683544303798
+
+              precision    recall  f1-score   support
+
+           0       0.68      0.73      0.70        26
+           1       0.86      0.83      0.85        53
+
+    accuracy                           0.80        79
+   macro avg       0.77      0.78      0.77        79
+weighted avg       0.80      0.80      0.80        79
