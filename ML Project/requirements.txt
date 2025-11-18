@@ -5,9 +5,3 @@ matplotlib
 seaborn
 jupyter
 joblib
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-joblib
