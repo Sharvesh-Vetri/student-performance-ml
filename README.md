@@ -1,30 +1,57 @@
-# Student Performance ML
+# 🎓 Student Performance Prediction (Machine Learning Project)
 
-This repository contains scripts and notebooks for a student performance machine learning project. The project runs all steps via a Windows batch file `run.bat`.
+This project predicts whether a student will **pass or fail** based on demographic, social, and academic factors from the UCI Student Performance dataset.  
 
-## Project Structure
+Two machine learning models are implemented:
 
-- `data/` - raw CSV files (`student-mat.csv`, `student-por.csv`)
-- `scripts/` - Python scripts: `cleaning.py`, `logistic_regression.py`, `random_forest.py`, `model_comparison.py`
-- `notebooks/` - exploratory and model notebooks
-- `output/` - generated outputs (plots, model files, metrics)
-- `requirements.txt` - Python dependencies
-- `run.bat` - Windows batch to run the full pipeline
+- **Logistic Regression**
+- **Random Forest Classifier**
 
-## Quick Setup (PowerShell)
+The project is fully **reproducible**, **automated**, and uses a clean folder structure with separate scripts for data cleaning, modeling, and evaluation.
 
-Run these commands from the project root in PowerShell:
+---
 
-```
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-```
+# 📁 Project Structure
 
-Run the pipeline:
+student-performance-ml/
+│
+├── data/ # Raw datasets
+│ ├── student-mat.csv
+│ └── student-por.csv
+│
+├── output/ # Generated outputs (auto-created)
+│ ├── cleaned_student-mat.csv
+│ ├── cleaned_student-por.csv
+│ ├── lr_results.txt
+│ ├── rf_results.txt
+│ ├── comparison_results.txt
+│ ├── logreg_model.joblib
+│ └── rf_model.joblib
+│
+├── scripts/ # Executable pipeline scripts
+│ ├── cleaning.py
+│ ├── logistic_regression.py
+│ ├── random_forest.py
+│ └── model_comparison.py
+│
+├── notebooks/ # Jupyter notebooks for analysis
+│ ├── EDA_and_Cleaning.ipynb
+│ ├── LogReg_model.ipynb
+│ ├── RandomForest_model.ipynb
+│ └── Model_comparisson.ipynb
+│
+├── requirements.txt # Dependencies
+├── run.sh
+└── README.md
 
-```
-.\run.bat
-```
+---
 
+# 🚀 How to Run the Entire Pipeline
+
+The entire project runs automatically using **one command**.
+
+## **Mac/Linux**
+```bash
+chmod +x run.sh
+./run.sh
 
